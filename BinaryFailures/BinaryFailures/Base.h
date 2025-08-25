@@ -19,4 +19,8 @@ struct Student
 int32_t CountPeople(std::ifstream&);
 void InputPeople(std::ifstream& fin, std::string* a, int32_t size);
 void FillBinary(std::fstream& bin, std::string* a, int32_t size);
+void FillStructuresFromStudents(std::ifstream& fin, Student* a, int32_t size);
+void FillStructuresFromMarks(std::ifstream& fin, Student* a, int32_t size);
+void ConnectSurnamesAndMarks(Student* a, int32_t size_a, Student* b, int32_t size_b);
+void MakeMainBin(std::fstream& bin, Student* a, int32_t size);
 #endif
