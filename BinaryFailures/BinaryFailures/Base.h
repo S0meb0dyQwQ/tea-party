@@ -2,8 +2,9 @@
 #define BASE_H
 #include <iostream>
 #include <string>
+#include <fstream>
 
-struct Students
+struct Student
 {
 	std::string name;
 	std::string surname;
@@ -14,4 +15,8 @@ struct Students
 	int32_t mark_geo{};
 	int32_t mark_proga{};
 };
+
+int32_t CountPeople(std::ifstream&);
+void InputPeople(std::ifstream& fin, std::string* a, int32_t size);
+void FillBinary(std::fstream& bin, std::string* a, int32_t size);
 #endif

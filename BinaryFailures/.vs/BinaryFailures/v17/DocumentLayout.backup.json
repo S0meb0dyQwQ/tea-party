@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Students.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Students.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Magic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Magic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Marks.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Marks.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +30,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Students.txt",
+              "DocumentMoniker": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Students.txt",
+              "RelativeDocumentMoniker": "BinaryFailures\\Students.txt",
+              "ToolTip": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Students.txt",
+              "RelativeToolTip": "BinaryFailures\\Students.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-08-25T12:36:33.609Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -44,25 +61,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Students.txt",
-              "DocumentMoniker": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Students.txt",
-              "RelativeDocumentMoniker": "BinaryFailures\\Students.txt",
-              "ToolTip": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Students.txt",
-              "RelativeToolTip": "BinaryFailures\\Students.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-08-25T12:36:33.609Z",
+              "Title": "Magic.cpp",
+              "DocumentMoniker": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Magic.cpp",
+              "RelativeDocumentMoniker": "BinaryFailures\\Magic.cpp",
+              "ToolTip": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Magic.cpp",
+              "RelativeToolTip": "BinaryFailures\\Magic.cpp",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAjwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-25T13:51:04.902Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Base.h",
               "DocumentMoniker": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Base.h",
               "RelativeDocumentMoniker": "BinaryFailures\\Base.h",
-              "ToolTip": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Base.h*",
-              "RelativeToolTip": "BinaryFailures\\Base.h*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Base.h",
+              "RelativeToolTip": "BinaryFailures\\Base.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-08-25T11:51:08.754Z",
               "EditorCaption": ""
@@ -75,7 +92,7 @@
               "RelativeDocumentMoniker": "BinaryFailures\\main.cpp",
               "ToolTip": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\main.cpp*",
               "RelativeToolTip": "BinaryFailures\\main.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-25T11:50:16.974Z",
               "EditorCaption": ""
