@@ -25,7 +25,7 @@ void FillBinary(std::fstream& bin, std::string* a, int32_t size)
 {
 	for (int32_t i{}; i < size; ++i)
 	{
-		bin.write(reinterpret_cast<char*>(&a[i]), sizeof a[i]); //такое есть таким можно пользоваться
+		bin.write(reinterpret_cast<char*>(&a[i]), sizeof a[i]);
 	}
 }
 void FillStructuresFromStudents(std::ifstream& fin, Student* a, int32_t size)
@@ -62,7 +62,7 @@ void FillStructuresFromMarks(std::ifstream& fin, Student* a, int32_t size)
 		fin >> a[i].mark_proga;
 	}
 }
-void ConnectSurnamesAndMarks(Student* a, int32_t size_a, Student* b, int32_t size_b)
+void ConnectStudentsAndMarks(Student* a, int32_t size_a, Student* b, int32_t size_b)
 {
 	for (int32_t i{}; i < size_a; ++i)
 	{
@@ -83,11 +83,40 @@ void MakeMainBin(std::fstream& bin, Student* a, int32_t size)
 	}
 }
 
+////////////////////////////////
+double CountAverage(Student a)
+{
+	return(static_cast<double>(a.mark_geo + a.mark_ma + a.mark_proga)) / 3;
+}
+void FillAverageMark(Student* a, int32_t size)//well i dont know another ways
+{
+	for (int32_t i{}; i < size; ++i)
+	{
+		a[i].average = CountAverage(a[i]);
+	}
+}
+void MakeAverageBin(std::fstream& bin, Student* a, int32_t size)
+{
+	for (int32_t i{}; i < size; ++i) 
+	{
+		bin.write(reinterpret_cast<char*>(&a[i].average), sizeof a[i].average);
+	}
+}
+//////////////////////////////////////
+
+bool CompareSurnamesByAlphabet(Student a, Student b) {
+	const char* A = a.surname.c_str();
+	const char* B = b.surname.c_str();
+	if (strcmp(A, B) > 0) {
+		return 1;
+	}
+	return 0;
+}
 
 int32_t CountUnderachievers(Student* array, int32_t arraySize) {
 	int32_t counter{};
 	for (int32_t i{}; i < arraySize; ++i) {
-		if (true /*function::CountAverage(array[i]) < 4*/) {
+		if (CountAverage(array[i]) < 4) {
 			++counter;
 		}
 	}
@@ -98,7 +127,7 @@ int32_t CountUnderachievers(Student* array, int32_t arraySize) {
 void InputUnderachievers(Student* array, int32_t arraySize, Underachiever* UnderachieversArray) {
 	int32_t counter{};
 	for (int32_t i{}; i < arraySize; ++i) {
-		if (true /*function::CountAverage(array[i]) < 4*/) {
+		if (CountAverage(array[i]) < 4) {
 			UnderachieversArray[counter].surname = array[i].surname;
 			UnderachieversArray[counter].group = array[i].group;
 			UnderachieversArray[counter].id = array[i].id;
@@ -123,15 +152,4 @@ void SortUnderachieversByGroupAndSurname(Underachiever* UnderachieversArray, int
 		}
 		--arraySize;
 	}
-}
-
-
-
-bool CompareSurnamesByAlphabet(Student a, Student b) {
-	const char* A = a.surname.c_str();
-	const char* B = b.surname.c_str();
-	if (strcmp(A, B) > 0) {
-		return 1;
-	}
-	return 0;
 }
