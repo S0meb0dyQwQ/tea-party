@@ -25,7 +25,7 @@ void FillBinary(std::fstream& bin, std::string* a, int32_t size)
 {
 	for (int32_t i{}; i < size; ++i)
 	{
-		bin.write(reinterpret_cast<char*>(&a[i]), sizeof a[i]); //такое есть таким можно пользоваться
+		bin.write(reinterpret_cast<char*>(&a[i]), sizeof a[i]);
 	}
 }
 void FillStructuresFromStudents(std::ifstream& fin, Student* a, int32_t size)
@@ -62,7 +62,7 @@ void FillStructuresFromMarks(std::ifstream& fin, Student* a, int32_t size)
 		fin >> a[i].mark_proga;
 	}
 }
-void ConnectSurnamesAndMarks(Student* a, int32_t size_a, Student* b, int32_t size_b)
+void ConnectStudentsAndMarks(Student* a, int32_t size_a, Student* b, int32_t size_b)
 {
 	for (int32_t i{}; i < size_a; ++i)
 	{
@@ -81,4 +81,23 @@ void MakeMainBin(std::fstream& bin, Student* a, int32_t size)
 	{
 		bin.write(reinterpret_cast<char*>(&a[i]), sizeof a[i]);
 	}
+}
+double CountAverage(Student a)
+{
+	return(static_cast<double>(a.mark_geo + a.mark_ma + a.mark_proga)) / 3;
+}
+void FillAverageMark(Student* a, int32_t size)//well i dont know another ways
+{
+	for (int32_t i{}; i < size; ++i)
+	{
+		a[i].average = CountAverage(a[i]);
+	}
+}
+void MakeAverageBin(std::fstream& bin, Student* a, int32_t size)
+{
+	for (int32_t i{}; i < size; ++i) 
+	{
+		bin.write(reinterpret_cast<char*>(&a[i].average), sizeof a[i].average);
+	}
+
 }

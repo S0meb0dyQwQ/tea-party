@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Students.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Students.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Marks.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Marks.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Students.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Students.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Magic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Magic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Marks.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Marks.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Average.bin||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Average.bin||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{74FBD780-F4E8-4E33-9ECF-7AFE0094C7B2}|BinaryFailures\\BinaryFailures.vcxproj|solutionrelative:BinaryFailures\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +34,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "Average.bin",
+              "DocumentMoniker": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Average.bin",
+              "RelativeDocumentMoniker": "BinaryFailures\\Average.bin",
+              "ToolTip": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Average.bin",
+              "RelativeToolTip": "BinaryFailures\\Average.bin",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAToSURBVDhPfVRLbBNXFL1v5nnsGY9nEmwnTgIkMSHQJkAIhQYK5Se1myIhtbuq6k8gJFasq3bHrt1UVbtou6hU0XbVD91UlajUFBABkhBS2hCSECckNrbHY3vszOe9mV6bFIki9UjP48V959577rmPwP\u002Bgoz0V6Uql\u002Bjn3txCBEFEUMivZ7F8PVldr6yFPIgiCpwhlWVb3Dh8clKT0W5q2/5XW\u002BK5UMtklRKMQcJ6FsnnbePDg6q\u002BmMffllbHfxz2PlRzHWb8N8ARhi97a/fy\u002Bk\u002B\u002Bm06\u002Bdad1wKO660WZAVAWIaQBaDEDFE5ZsyCxerd2a/PGryVujn83M3r1Tr9ebHGLzF9Git2w\u002Bfuzt9/cfOHc6ldqH1yVgHgD3AUIhrDwCoCgBdoCkagi6e3ql/v6BXQBOT7Wany6VSg8Z548IFVlWjh199eyx4\u002BfOJJNpGZUgPgeorwFUqkAwjoQoQEQGoqpAYiohShQgmdRoOr2l1yiuRKb/nLrqum69SXjowMGhw0fe\u002BWjrthGdENJss4ZkFkpfqTS0xraRAMnWD8GOsGqFQLJNE1VVHigWVsZm7s7OCA3CVCr9\u002BvBzh9sb2VW8GJKARNZbDEsVbH2Ouc49RxRMUKNBI4ZgtRDDeExEDr04Eu7b0ndW13VB7GhP0BMn3vhkaPeITikBoZECS2x867VFtrjwzfWVle8uZHOXfvPcZSfd297V07uB6jrBqgPUNwCRcCgVch2ZpaULdPPGzu5nBnZsiuH0UCusqFkhElpwY\u002BzixLUbn75XKZf\u002B8IOAz927tjWZ5OeHhk6dJC4n2UwGKoVVqBk5INlZ2XOdA5Qxvqmnp1PQYgR8nGhUQXswAMYKPF\u002BYGi2XjSuGUcJ5A5imefeXn7\u002B9tDtWON6lco1SAUhYhhjqvr0d7zPWJzQGgFYg6DOitwRkQzyAtoRH4nodJMFlEACmeYwgcOqB5BSCGKmDInhEoQGJoFSSiFSEUIGG6JJRWPaB18E2V8FcnISVmxfBmvhe3BiujrTGlJ04\u002BQaguyPRu70jftRcLcWWl0uQy1mQz1tgGBYsZAqBSOmC6PuB1RlX34y5RT3/9zWw5q8Dyd\u002BBsFeCEPM6fEb6OOOpdErfe6S/81R3iLwsOF7Y4wG4vgjYA3geh4mFnDNvsg/EqlXz4zL07UgGe5MKB1kiwF0PzEIV6iVLpLW19GBCfeHEYOLIniTdGeJcKlse1BtbRChw5oON8aP3Ht68MnHnw6YPjbr39f1ssUggIFbVgWKFE6PiQaVsg\u002BB6pC3sKymJqwn0XFynRFMl4qAjTLNGyuUamV7Is7wdfG6Wy6y5KasPi6ZAw0pKlfcIvh\u002BqVddw5Rwo42GYXZND\u002BDBI6DsZOJXBE6Tmjq/ZDAzLZrdLzk\u002Bj49Mfu55nNQk9xrxi1V4AIdQWo2QbYUGoZtlQqzlABBEdIBNV10DBJRbEEPH8AHc9wM5cNmW6l\u002BfL9fP5QnHm8ePQAPd9M5MvT1XRKL7rDVDGwwwVl0QCqkJBxSrlMAWK7qg5DKazFe\u002Bm4f0wh2Sz8/evr9l2015PvIcNKHJE27d753DU907HRf\u002BljTGptQfFS\u002BgRVNiHpbKzNp61x3I2\u002BeLy\u002BO1LjLOcbTv4fDzCU4T/QtM02DH4bBz/Dju2vRkDaTgSyQuUjk9NTS/h1uBY/guAfwCznkueldxIFgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-26T08:48:30.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Students.txt",
               "DocumentMoniker": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Students.txt",
               "RelativeDocumentMoniker": "BinaryFailures\\Students.txt",
@@ -47,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Marks.txt",
               "DocumentMoniker": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Marks.txt",
               "RelativeDocumentMoniker": "BinaryFailures\\Marks.txt",
@@ -66,20 +81,20 @@
               "RelativeDocumentMoniker": "BinaryFailures\\Magic.cpp",
               "ToolTip": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Magic.cpp",
               "RelativeToolTip": "BinaryFailures\\Magic.cpp",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAmwFEAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAF8AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-25T13:51:04.902Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Base.h",
               "DocumentMoniker": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Base.h",
               "RelativeDocumentMoniker": "BinaryFailures\\Base.h",
               "ToolTip": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\Base.h",
               "RelativeToolTip": "BinaryFailures\\Base.h",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAcwBgAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwBwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-08-25T11:51:08.754Z",
               "EditorCaption": ""
@@ -92,7 +107,7 @@
               "RelativeDocumentMoniker": "BinaryFailures\\main.cpp",
               "ToolTip": "C:\\Users\\Comp\\Git\\scary-practos\\BinaryFailures\\BinaryFailures\\main.cpp",
               "RelativeToolTip": "BinaryFailures\\main.cpp",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABgAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-25T11:50:16.974Z",
               "EditorCaption": ""
