@@ -82,3 +82,56 @@ void MakeMainBin(std::fstream& bin, Student* a, int32_t size)
 		bin.write(reinterpret_cast<char*>(&a[i]), sizeof a[i]);
 	}
 }
+
+
+int32_t CountUnderachievers(Student* array, int32_t arraySize) {
+	int32_t counter{};
+	for (int32_t i{}; i < arraySize; ++i) {
+		if (true /*function::CountAverage(array[i]) < 4*/) {
+			++counter;
+		}
+	}
+	return counter;
+}
+
+
+void InputUnderachievers(Student* array, int32_t arraySize, Underachiever* UnderachieversArray) {
+	int32_t counter{};
+	for (int32_t i{}; i < arraySize; ++i) {
+		if (true /*function::CountAverage(array[i]) < 4*/) {
+			UnderachieversArray[counter].surname = array[i].surname;
+			UnderachieversArray[counter].group = array[i].group;
+			UnderachieversArray[counter].id = array[i].id;
+			++counter;
+		}
+	}
+}
+
+
+void SortUnderachieversByGroupAndSurname(Underachiever* UnderachieversArray, int32_t arraySize) {
+	while (arraySize) {
+		for (int32_t i{}; i < arraySize - 1; ++i) {
+			if (UnderachieversArray[i].group > UnderachieversArray[i + 1].group) {
+				std::swap(UnderachieversArray[i], UnderachieversArray[i + 1]);
+			}
+			if (UnderachieversArray[i].group == UnderachieversArray[i + 1].group) {
+				if (CompareSurnamesByAlphabet(UnderachieversArray[i].surname, UnderachieversArray[i + 1].surname)) {
+					std::swap(UnderachieversArray[i], UnderachieversArray[i + 1]);
+				}
+			}
+
+		}
+		--arraySize;
+	}
+}
+
+
+
+bool CompareSurnamesByAlphabet(Student a, Student b) {
+	const char* A = a.surname.c_str();
+	const char* B = b.surname.c_str();
+	if (strcmp(A, B) > 0) {
+		return 1;
+	}
+	return 0;
+}
