@@ -23,8 +23,16 @@ int main()
 	delete[]marks;
 	std::fstream stud_bin("InfoStud.bin", std::ios::in | std::ios::out | std::ios::binary);
 	MakeMainBin(stud_bin, peoples, size_stud);
-
-	std::fstream average_bin("Average.bin", std::ios::in | std::ios::out | std::ios::binary);
+  
+  /////////////
+  std::fstream average_bin("Average.bin", std::ios::in | std::ios::out | std::ios::binary);
 	FillAverageMark(peoples, size_stud);
+  //////////////
+  
+	int32_t countOfUnderachievers{ CountUnderachievers(peoples, size_stud) };
+	Underachiever* underachievePeoples = new Underachiever[countOfUnderachievers];
+	InputUnderachievers(peoples, size_stud, underachievePeoples);
+	SortUnderachieversByGroupAndSurname(underachievePeoples, countOfUnderachievers);
+  
 	return 0;
 }
