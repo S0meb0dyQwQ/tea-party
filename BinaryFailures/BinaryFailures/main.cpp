@@ -20,6 +20,15 @@ int main()
 	Student* marks = new Student[size_mark];
 	FillStructuresFromMarks(fin_mark, marks, size_mark);
 	ConnectStudentsAndMarks(peoples, size_stud, marks, size_mark);
+
+	CreateStatemantByAlphabet(peoples, size_stud);
+	CreateStatementByAverageMark(peoples, size_stud);
+	int32_t size_high_achiev{ CountHighAchievers(peoples, size_stud) };
+	StudentByPerformance* HighAchievers = new StudentByPerformance[size_high_achiev];
+	InputHighAchievers(HighAchievers, peoples, size_stud);
+	for (size_t i{}; i < size_high_achiev; ++i) {
+		std::cout << HighAchievers[i].surname << '\t' << HighAchievers[i].id << '\n';
+	}
 	delete[]marks;
 	std::fstream stud_bin("InfoStud.bin", std::ios::in | std::ios::out | std::ios::binary);
 	MakeMainBin(stud_bin, peoples, size_stud);
