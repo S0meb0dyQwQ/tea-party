@@ -55,5 +55,6 @@ void InputHighAchievers(StudentByPerformance*, Student*, size_t);
 int32_t CountUnderachievers(Student*, int32_t);
 void InputUnderachievers(Student*, int32_t, Underachiever*);
 void SortUnderachieversByGroupAndSurname(Underachiever*, int32_t);
+void InputUnderachievers(Student* array, int32_t arraySize, Underachiever* UnderachieversArray);
 
 #endif

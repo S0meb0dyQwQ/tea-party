@@ -203,16 +203,21 @@ int32_t CountHighAchievers(Student* array, size_t size) {
 	}
 	return res;
 }
-void InputHighAchievers(StudentByPerformance* array, Student* peoples, size_t size_stud) {
+void InputHighAchievers(StudentByPerformance* array, Student* peoples, size_t size_stud)
+{
 	size_t t{};
-	for (size_t i{}; i < size_stud; ++i) {
+	for (size_t i{}; i < size_stud; ++i)
+	{
 		if (peoples[i].average >= 8) {
 			array[t].surname = peoples[i].surname;
 			array[t].group = peoples[i].group;
 			array[t++].id = peoples[i].id;
 		}
+	}
+}
 
-void InputUnderachievers(Student* array, int32_t arraySize, Underachiever* UnderachieversArray) {
+void InputUnderachievers(Student* array, int32_t arraySize, Underachiever* UnderachieversArray) 
+{
 	int32_t counter{};
 	for (int32_t i{}; i < arraySize; ++i) {
 		if (CountAverage(array[i]) < 4) {

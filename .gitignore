@@ -42,6 +42,7 @@ cmake_install.cmake
 *.pdb
 *.ipch
 *.opendb
+*.vs/
 
 # Файлы Make
 Makefile
@@ -49,4 +50,4 @@ Makefile
 
 # Файлы для отладки
 *.stackdump
-*.debug
+*.debug.vs/
