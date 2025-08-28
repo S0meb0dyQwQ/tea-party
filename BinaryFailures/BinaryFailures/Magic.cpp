@@ -1,4 +1,4 @@
-#include "Base.h"
+#include "Functions.h"
 
 int32_t CountPeople(std::ifstream& fin)
 {
@@ -25,7 +25,7 @@ void FillBinary(std::fstream& bin, std::string* a, int32_t size)
 {
 	for (int32_t i{}; i < size; ++i)
 	{
-		bin.write(reinterpret_cast<char*>(&a[i]), sizeof a[i]); //такое есть таким можно пользоваться
+		bin.write(reinterpret_cast<char*>(&a[i]), sizeof a[i]);
 	}
 }
 void FillStructuresFromStudents(std::ifstream& fin, Student* a, int32_t size)
@@ -52,7 +52,7 @@ void FillStructuresFromMarks(std::ifstream& fin, Student* a, int32_t size)
 		fin.ignore();
 		fin >> a[i].id;
 		fin.ignore();
-		getline(fin,line, ';');
+		getline(fin, line, ';');
 		fin >> a[i].mark_ma;
 		fin.ignore();
 		getline(fin, line, ';');
@@ -62,32 +62,88 @@ void FillStructuresFromMarks(std::ifstream& fin, Student* a, int32_t size)
 		fin >> a[i].mark_proga;
 	}
 }
-void ConnectSurnamesAndMarks(Student* a, int32_t size_a, Student* b, int32_t size_b)
+void ConnectStudentsAndMarks(Student* a, int32_t size_a, Student* b, int32_t size_b)
 {
 	for (int32_t i{}; i < size_a; ++i)
 	{
-		for(int32_t k{}; k < size_b; ++k)
-		if (a[i].id == b[k].id)
-		{
-			a[i].mark_ma = b[k].mark_ma;
-			a[i].mark_geo = b[k].mark_geo;
-			a[i].mark_proga = b[k].mark_proga;
-		}
+		for (int32_t k{}; k < size_b; ++k)
+			if (a[i].id == b[k].id)
+			{
+				a[i].group = b[k].group;
+				a[i].mark_ma = b[k].mark_ma;
+				a[i].mark_geo = b[k].mark_geo;
+				a[i].mark_proga = b[k].mark_proga;
+			}
 	}
 }
-void MakeMainBin(std::fstream& bin, Student* a, int32_t size) 
+
+
+//void MakeMainBin(std::fstream & bin, Student * a, int32_t size) { //wrong
+//	for (int32_t i{}; i < size; ++i) {
+//
+//		std::string str = a[i].name + ';';
+//		bin.write(str.c_str(), str.size());
+//
+//		str = a[i].surname + ';';
+//		bin.write(str.c_str(), str.size());
+//
+//		str = a[i].patronymic + ';';
+//		bin.write(str.c_str(), str.size());
+//
+//		str = std::to_string(a[i].group) + ';';
+//		bin.write(str.c_str(), str.size());
+//
+//		str = std::to_string(a[i].id) + ';';
+//		bin.write(str.c_str(), str.size());
+//
+//		str = std::to_string(a[i].mark_ma) + ';';
+//		bin.write(str.c_str(), str.size());
+//
+//		str = std::to_string(a[i].mark_geo) + ';';
+//		bin.write(str.c_str(), str.size());
+//
+//		str = std::to_string(a[i].mark_proga) + '\n';
+//		bin.write(str.c_str(), str.size());
+//	}
+//}
+
+
+////////////////////////////////
+double CountAverage(Student a)
+{
+	return(static_cast<double>(a.mark_geo + a.mark_ma + a.mark_proga)) / 3;
+}
+void FillAverageMark(Student* a, int32_t size)//well i dont know another ways
 {
 	for (int32_t i{}; i < size; ++i)
 	{
-		bin.write(reinterpret_cast<char*>(&a[i]), sizeof a[i]);
+		a[i].average = CountAverage(a[i]);
 	}
+}
+
+void MakeAverageBin(std::fstream& bin, Student* a, int32_t size)
+{
+	for (int32_t i{}; i < size; ++i)
+	{
+		bin.write(reinterpret_cast<char*>(&a[i].average), sizeof a[i].average);
+	}
+}
+//////////////////////////////////////
+
+bool CompareSurnamesByAlphabet(std::string a, std::string b) {
+	const char* A = a.c_str();
+	const char* B = b.c_str();
+	if (strcmp(A, B) > 0) {
+		return 1;
+	}
+	return 0;
 }
 
 
 int32_t CountUnderachievers(Student* array, int32_t arraySize) {
 	int32_t counter{};
 	for (int32_t i{}; i < arraySize; ++i) {
-		if (true /*function::CountAverage(array[i]) < 4*/) {
+		if (CountAverage(array[i]) < 4) {
 			++counter;
 		}
 	}
@@ -95,10 +151,10 @@ int32_t CountUnderachievers(Student* array, int32_t arraySize) {
 }
 
 
-void InputUnderachievers(Student* array, int32_t arraySize, Underachiever* UnderachieversArray) {
+void InputUnderachievers(Student* array, int32_t arraySize, StudentByPerformance* UnderachieversArray) {
 	int32_t counter{};
 	for (int32_t i{}; i < arraySize; ++i) {
-		if (true /*function::CountAverage(array[i]) < 4*/) {
+		if (CountAverage(array[i]) < 4) {
 			UnderachieversArray[counter].surname = array[i].surname;
 			UnderachieversArray[counter].group = array[i].group;
 			UnderachieversArray[counter].id = array[i].id;
@@ -107,8 +163,21 @@ void InputUnderachievers(Student* array, int32_t arraySize, Underachiever* Under
 	}
 }
 
+//void MakeStudentsByPerformanceBin(std::fstream& bin, StudentByPerformance* a, int32_t size) {
+//	for (int32_t i{}; i < size; ++i) {
+//		std::string str = a[i].surname + ';';
+//		bin.write(str.c_str(), str.size());
+//
+//		str = std::to_string(a[i].group) + ';';
+//		bin.write(str.c_str(), str.size());
+//
+//		str = std::to_string(a[i].id) + '\n';
+//		bin.write(str.c_str(), str.size());
+//	}
+//}
 
-void SortUnderachieversByGroupAndSurname(Underachiever* UnderachieversArray, int32_t arraySize) {
+
+void SortUnderachieversByGroupAndSurname(StudentByPerformance* UnderachieversArray, int32_t arraySize) {
 	while (arraySize) {
 		for (int32_t i{}; i < arraySize - 1; ++i) {
 			if (UnderachieversArray[i].group > UnderachieversArray[i + 1].group) {
@@ -119,19 +188,30 @@ void SortUnderachieversByGroupAndSurname(Underachiever* UnderachieversArray, int
 					std::swap(UnderachieversArray[i], UnderachieversArray[i + 1]);
 				}
 			}
-
 		}
 		--arraySize;
 	}
 }
 
+//void PrintBinary(std::fstream& bin) {
+//	bin.seekg(0, std::ios::end);
+//	size_t arraySize = static_cast<size_t>(bin.tellg());
+//	bin.seekg(0, std::ios::beg);
+//	char* cText = new char[arraySize];
+//	bin.read(cText, arraySize);
+//	std::string binText{ cText, arraySize };
+//	delete[] cText;
+//	std::cout << binText;
+//}
 
-
-bool CompareSurnamesByAlphabet(Student a, Student b) {
-	const char* A = a.surname.c_str();
-	const char* B = b.surname.c_str();
-	if (strcmp(A, B) > 0) {
-		return 1;
+void FillTxtWithList(StudentByPerformance* list, int32_t listSize, std::ofstream& oFile) {
+	for (int32_t i{}; i < listSize; ++i) {
+		oFile << list[i].surname << ';' << list[i].group << ';' << list[i].id << '\n';
 	}
-	return 0;
+}
+
+void PrintList(StudentByPerformance* list, int32_t listSize) {
+	for (int32_t i{}; i < listSize; ++i) {
+		std::cout << list[i].surname << ';' << list[i].group << ';' << list[i].id << '\n';
+	}
 }
