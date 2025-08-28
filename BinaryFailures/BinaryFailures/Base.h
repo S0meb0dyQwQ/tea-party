@@ -16,14 +16,8 @@ struct Student
 	int32_t mark_proga{};
 	double average{ 0.0 };
 };
+
 struct StudentByPerformance {
-	std::string surname;
-	int32_t group{};
-	int32_t id{};
-};
-
-
-struct Underachiever {
 	std::string surname;
 	int32_t group{};
 	int32_t id{};
@@ -53,8 +47,16 @@ int32_t CountHighAchievers(Student*, size_t);
 void InputHighAchievers(StudentByPerformance*, Student*, size_t);
 
 int32_t CountUnderachievers(Student*, int32_t);
-void InputUnderachievers(Student*, int32_t, Underachiever*);
-void SortUnderachieversByGroupAndSurname(Underachiever*, int32_t);
-void InputUnderachievers(Student* array, int32_t arraySize, Underachiever* UnderachieversArray);
+void SortUnderachieversByGroupAndSurname(StudentByPerformance*, int32_t);
+void InputUnderachievers(Student* array, int32_t arraySize, StudentByPerformance* UnderachieversArray);
 
+void InputUnderachievers(Student*, int32_t, StudentByPerformance*);
+void MakeStudentsByPerformanceBin(std::fstream&, StudentByPerformance*, int32_t);
+
+void SortUnderachieversByGroupAndSurname(StudentByPerformance*, int32_t);
+
+void PrintBinary(std::fstream&);
+
+void FillTxtWithList(StudentByPerformance*, int32_t, std::ofstream&);
+void PrintList(StudentByPerformance*, int32_t);
 #endif
