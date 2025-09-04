@@ -1,8 +1,10 @@
 #ifndef BASE_H
 #define BASE_H
+
 #include <iostream>
 #include <string>
 #include <fstream>
+
 
 struct Student
 {
@@ -23,7 +25,12 @@ struct StudentByPerformance {
 	int32_t id{};
 };
 
-
+void CheckFile(std::fstream&);
+void CheckInputFile(std::ifstream&);
+void CheckOutputFile(std::ofstream&);
+void CheckPeople(int32_t);
+void CheckGroup(int32_t);
+void CheckSize(int32_t);
 int32_t CountPeople(std::ifstream&);
 void InputPeople(std::ifstream& fin, std::string* a, int32_t size);
 void FillBinary(std::fstream& bin, std::string* a, int32_t size);

@@ -1,5 +1,65 @@
 #include "Base.h"
+void CheckFile(std::fstream& f)
+{
 
+	if (!f.good())
+	{
+		throw  std::ios_base::failure("file doesn't exist\n");
+	}
+	if (!f)
+	{
+		throw  std::ios_base::failure("output file error\n");
+	}
+
+}
+void CheckOutputFile(std::ofstream& fout) 
+{
+	if (!fout.good())
+	{
+		throw  std::ios_base::failure("file doesn't exist\n");
+	}
+	if (!fout)
+	{
+		throw  std::ios_base::failure("output file error\n");
+	}
+}
+void CheckInputFile(std::ifstream& fin)
+{
+
+	if (!fin.good())
+	{
+		throw std::ios_base::failure("file doesn't exist\n");
+	}
+	if (!fin)
+	{
+		throw  std::ios_base::failure("input file error\n");
+	}
+	if (fin.peek() == EOF)
+	{
+		throw  std::ios_base::failure("file is empty!\n");
+	}
+}
+void CheckPeople(int32_t a)
+{
+	if (a == 0)
+	{
+		throw std::invalid_argument( "there's no such people\n");
+	}
+}
+void CheckGroup(int32_t a) 
+{
+	if (a <= 0)
+	{
+		throw std::invalid_argument("there cant't be group with this number\n");
+	}
+}
+void CheckSize(int32_t a)
+{
+	if (a <= 0)
+	{
+		throw std::invalid_argument("there no people in this group\n");
+	}
+}
 int32_t CountPeople(std::ifstream& fin)
 {
 	fin.clear();
@@ -12,11 +72,13 @@ int32_t CountPeople(std::ifstream& fin)
 	}
 	return counter;
 }
+
+
 void InputPeople(std::ifstream& fin, std::string* a, int32_t size)
 {
 	fin.clear();
 	fin.seekg(0, std::ios::beg);
-	for (int32_t i{}; i < size; ++i)
+	for (int32_t i = 0; i < size; ++i)
 	{
 		getline(fin, a[i]);
 	}
@@ -109,7 +171,6 @@ void MakeMainBin(std::fstream& bin, Student* a, int32_t size) {
 	bin.write(str.c_str(), str.size());*/
 }
 
-////////////////////////////////
 double CountAverage(Student a)
 {
 	return(static_cast<double>(a.mark_geo + a.mark_ma + a.mark_proga)) / 3;
@@ -191,6 +252,7 @@ void SortUnderachieversByGroupAndSurname(StudentByPerformance* UnderachieversArr
 		--arraySize;
 	}
 }
+//функция сортировки 
 
 void PrintBinary(std::fstream& bin) {
 	bin.seekg(0, std::ios::end);
@@ -252,7 +314,9 @@ void CreateStatemantByAlphabet(Student* peoples, size_t size_stud) {
 	std::cout << "Choose a group\n";
 	int32_t group_number{};
 	std::cin >> group_number;
+	CheckGroup(group_number);
 	int32_t size{ CountPeopleInGroup(peoples, size_stud, group_number) };
+	CheckSize(size);
 	Student* group_by_alphabet = new Student[size];
 	FillArrayByGroup(peoples, size_stud, group_by_alphabet, group_number);
 	SortByAlphabet(group_by_alphabet, size);
@@ -274,7 +338,9 @@ void CreateStatementByAverageMark(Student* peoples, size_t size_stud) {
 	std::cout << "Choose a group\n";
 	int32_t group_number{};
 	std::cin >> group_number;
+	CheckGroup(group_number);
 	int32_t size{ CountPeopleInGroup(peoples, size_stud, group_number) };
+	CheckSize(size);
 	Student* group_by_alphabet = new Student[size];
 	FillArrayByGroup(peoples, size_stud, group_by_alphabet, group_number);
 	FillAverageMark(group_by_alphabet, size);
@@ -304,3 +370,5 @@ void InputHighAchievers(StudentByPerformance* array, Student* peoples, size_t si
 		}
 	}
 }
+//функция вывода содержимого
+//бинарного файла на консоль
